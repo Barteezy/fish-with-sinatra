@@ -1,0 +1,12 @@
+<h1>Fish Homepage</h1>
+
+<% @fish.each do |fish| %>
+<ul>
+  <li><a href="/Snake%20Head"><%=fish[:name]%></a></li>
+</ul>
+<%end%>
+
+<form action="/" method="post">
+  <input type="text" placeholder="New Fish" name="new_fish"/>
+  <input type="submit" value="Add">
+</form>

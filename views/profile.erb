@@ -1,0 +1,18 @@
+<h1><%= @fish_name %></h1>
+
+<% @fish.each do |fish| %>
+    <%= fish[:description] if fish[:name] == @fish_name %>
+    <img src="<%= fish[:picture] if fish[:name] == @fish_name %>">
+<% end %>
+
+
+
+<% @fish.each do |fish| %>
+    <% if fish[:name] == @fish_name %>
+        <a href="<%= fish[:wikilink] %>">wiki</a>
+    <% end %>
+<% end %>
+
+<br>
+
+<a href="/">Back to Totally Cool Homepage</a>
